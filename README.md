@@ -3,6 +3,7 @@
 [![npm version](https://badge.fury.io/js/pathmatch.svg)](https://badge.fury.io/js/pathmatch) 
 [![Build Status](https://travis-ci.org/dawson-org/pathmatch.svg?branch=master)](https://travis-ci.org/dawson-org/pathmatch) 
 [![Coverage Status](https://coveralls.io/repos/github/dawson-org/pathmatch/badge.svg?branch=master)](https://coveralls.io/github/dawson-org/pathmatch?branch=master) 
+[![devDependencies Status](https://david-dm.org/dawson-org/pathmatch/dev-status.svg)](https://david-dm.org/dawson-org/pathmatch?type=dev)  
 
 Compares HTTP paths with API-Gateway style paths, and extracts named parameters
 
@@ -20,7 +21,7 @@ compare('/foo/bar', '/foo/bar/baz') // false
 compare('/foo/{bar}', '/foo/xxx') // [['bar'], ['xxx']]
 compare('/foo/{bar}/baz', '/foo/xxx/baz') // [['bar'], ['xxx']]
 compare('/foo/{bar}/baz', '/foo/xxx/byz') // false
-compare('/foo/{bar}/{baz}', '/foo/xxx/yyy')// [['bar', 'baz'], ['xxx', 'yyy']]
+compare('/foo/{bar}/{baz}', '/foo/xxx/yyy') // [['bar', 'baz'], ['xxx', 'yyy']]
 ```
 
 ### License
