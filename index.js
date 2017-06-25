@@ -1,5 +1,6 @@
 
 export const PATHNAME_RE = '[^?#/]+'; // https://tools.ietf.org/html/rfc3986#section-3.3
+export const PATHNAME_RE_GREEDY = '[^?#]+'; // greedy paths (+) match slashes too
 
 export function replaceOne (haystack, fromIndex = 0) {
   let startIndex = haystack.indexOf('{', fromIndex);
@@ -8,10 +9,17 @@ export function replaceOne (haystack, fromIndex = 0) {
   }
   let endIndex = haystack.indexOf('}', startIndex);
   let name = haystack.substring(startIndex + 1, endIndex);
+  let re;
+  if (name.indexOf('+') !== -1) {
+    // matches full path until the end of the string
+    re = PATHNAME_RE_GREEDY;
+  } else {
+    re = PATHNAME_RE;
+  }
   return [
     endIndex,
     name,
-    `${haystack.substring(0, startIndex)}(${PATHNAME_RE})${haystack.substring(endIndex + 1)}`
+    `${haystack.substring(0, startIndex)}(${re})${haystack.substring(endIndex + 1)}`
   ];
 }
 

@@ -22,6 +22,7 @@ compare('/foo/{bar}', '/foo/xxx') // [['bar'], ['xxx']]
 compare('/foo/{bar}/baz', '/foo/xxx/baz') // [['bar'], ['xxx']]
 compare('/foo/{bar}/baz', '/foo/xxx/byz') // false
 compare('/foo/{bar}/{baz}', '/foo/xxx/yyy') // [['bar', 'baz'], ['xxx', 'yyy']]
+compare('/foo/{bar+}', '/foo/xxx/yyy') // [['bar+'], ['xxx/yyy']]
 ```
 
 ### License
