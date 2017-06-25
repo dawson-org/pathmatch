@@ -1,4 +1,4 @@
-# pathmatch
+# @dawson/pathmatch
 
 [![npm version](https://badge.fury.io/js/%40dawson%2Fpathmatch.svg)](https://badge.fury.io/js/%40dawson%2Fpathmatch) 
 [![Build Status](https://travis-ci.org/dawson-org/pathmatch.svg?branch=master)](https://travis-ci.org/dawson-org/pathmatch) 
@@ -14,7 +14,7 @@ $ npm install --save @dawson/pathmatch
 ```
 
 ```js
-import { compare } from 'pathmatch';
+import { compare } from '@dawson/pathmatch';
 compare('/foo/bar', '/foo/bar') // [[], []]
 compare('/foo/bar', '/foo') // false
 compare('/foo/bar', '/foo/bar/baz') // false
