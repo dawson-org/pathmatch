@@ -1,6 +1,6 @@
 {
   "name": "@dawson/pathmatch",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Compares HTTP paths with API-Gateway style paths, and extracts named parameters",
   "main": "dist/index.js",
   "repository": "git@github.com:dawson-org/pathmatch.git",
